@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>video music quiz</title>
+    <link rel="shortcut icon" href="assets/icon.png" type="image/png" />
+    <link rel="manifest" href="./manifest.json">
+    
+</head>
+
+<link rel="stylesheet" type="text/css" href="jquery/jquery-ui.css">
+<script src="jquery/jquery-3.4.1.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.css">
+<script src="bootstrap/bootstrap.js"></script>
+<script src="player.js"></script>
+<script src="songs/actualHits.js"></script>
+<script src="gameLogic.js"></script>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="videoContaines.css">
+
+<script>
+    var ready = false;
+</script>
+
+<div class="modal fade" id="resultModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Result</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container" id="resultModalBody">
+                    
+                </div>
+                
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="returnOnMenu()">Torna al menu</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<body style="height: 100vh; width:100vw; overflow:hidden">  <!--single page and not overflow-->
+    
+    <div class="container" id="menu">
+        <h2 style="width:100%; text-align: center;">Video music quiz</h2>
+        <div class="row playlist-row" >
+            <div class="col-4">
+                <img src="https://i.ytimg.com/vi/Pkh8UtuejGw/default.jpg">
+            </div>
+            <div class="col-8">
+                <button class="btn btn-primary" onclick="loadGame('actualHits')">gioca</label>
+            </div>
+        </div>
+
+        <div class="row playlist-row" >
+            <div class="col-4">
+                <img src="https://i.ytimg.com/vi/Pkh8UtuejGw/default.jpg">
+            </div>
+            <div class="col-8">
+                <button class="btn btn-primary" onclick="loadGame('actualHits')">gioca</label>
+            </div>
+        </div>
+
+        <div class="row playlist-row" >
+            <div class="col-4">
+                <img src="https://i.ytimg.com/vi/Pkh8UtuejGw/default.jpg">
+            </div>
+            <div class="col-8">
+                <button class="btn btn-primary" onclick="loadGame('actualHits')">gioca</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="gameView" style="margin-top: 100vh; height: 100vh; overflow: auto;">
+        <div class="row">
+            
+                <div class="col-4">
+                    <label>turn: </label>
+                    <label id="turn_label"></label>
+                </div>
+                <div class="col-7">
+                    <label style="float:left" id="points"></label>
+                    <label style="float:left">points: </label>
+                </div>
+            
+
+            <div class="col-12" style="background-color: black; height: 50vh;">
+                <div class="video-container" >
+                    <div class="video-foreground">
+                        <div id="player"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="progressbar">
+                    <div id="progress_of_progressbar" class="progress_of_progressbar progressbar_full"></div>
+                </div>
+            </div>
+        
+
+            <div class="col-6">
+                <button id="btn-0" onclick="answer(0)" class="btn btn-dark btn-good-dimensions">
+                    prima</button>
+            </div>
+            
+            <div class="col-6">
+                <button id="btn-1" onclick="answer(1)" class="btn btn-dark btn-good-dimensions">
+                    seconda</button>
+            </div>
+            
+            <div class="col-6">
+                <button id="btn-2" onclick="answer(2)" class="btn btn-dark btn-good-dimensions">
+                    terza</button>
+            </div>
+
+            <div class="col-6">
+                <button id="btn-3" onclick="answer(3)" class="btn btn-dark btn-good-dimensions">
+                    quarta</button>
+            </div>
+
+            <div class="col-12">
+                <button id="btn-next" onclick="loadQuestion()" class="btn btn-dark hided-next bottom-btn-good-dimensions" >prossima canzone</button>
+                <button id="btn-end" onclick="endGame()" class="btn btn-dark hided-next bottom-btn-good-dimensions">prossima canzone</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

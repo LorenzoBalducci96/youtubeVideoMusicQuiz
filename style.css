@@ -1,0 +1,52 @@
+.playlist-row{
+    margin: 4px;
+    padding: 8px;
+    background-color: #aaa; 
+    border-radius:8px;
+}
+
+.container{
+    transition: all 1s;
+}
+
+.hided-next{
+    display: none;
+}
+
+.btn-good-dimensions{
+    margin-top: 4px;
+    height: 12vh;
+    width: 100%;
+}
+
+.bottom-btn-good-dimensions{
+    margin-top: 4px;
+    height: 8vh;
+    width: 100%;
+}
+
+.progressbar{
+    margin-top: 4px;
+    height: 5vh;
+    width: 100%;
+    border-radius: 8px;
+    background-color: black;
+}
+
+.progress_of_progressbar{
+    margin-top: 4px;
+    height: 5vh;
+    border-radius: 8px;
+    background-color: red;
+}
+
+.progressbar_full{
+    width: 100%;
+    transition: width 0s ease-in-out;
+}
+
+/*we can change color*/
+.progressbar_empy{
+    transition: width 15s ease-in-out;
+    width: 0;
+}

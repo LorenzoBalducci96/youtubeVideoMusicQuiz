@@ -1,0 +1,17 @@
+{
+  "name": "video music quiz",
+  "short_name": "music quiz",
+  "start_url": "./index.html",
+  "display": "fullscreen",
+  "background_color": "#ff0000",
+  "description": "a video music quiz game based on youtube playlists",
+  "theme_color": "#ff0000",
+  "orientation": "landscape",
+  "icons": [
+    {
+      "src": "./assets/icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
