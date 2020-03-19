@@ -6,7 +6,6 @@
   "background_color": "#ff0000",
   "description": "a video music quiz game based on youtube playlists",
   "theme_color": "#ff0000",
-  "orientation": "landscape",
   "icons": [
     {
       "src": "./assets/icon.png",
